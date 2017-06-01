@@ -1,0 +1,12 @@
+https://github.com/loveemu/loveemu-lab/issues/2
+
+Note that the sourcecode may be the previous version. So here is the download page where I
+got it from:
+
+download page:
+
+https://github.com/vgmtrans/vgmtrans/releases/tag/interim-20150420
+
+source code:
+
+https://github.com/vgmtrans/vgmtrans
