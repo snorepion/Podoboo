@@ -39,7 +39,7 @@ namespace Podoboo
                 radioButton2.Checked = false;
                 radioButton3.Checked = false;
                 radioButton4.Checked = false;
-                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/rsprt/list.txt");
+                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/owspt/osprites.txt");
             }
             
             if (spritetooltouse == "owst")
@@ -48,6 +48,7 @@ namespace Podoboo
                 radioButton2.Checked = false;
                 radioButton3.Checked = true;
                 radioButton4.Checked = false;
+                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/pixi/list.txt");
             }
             if (spritetooltouse == "cst")
             {
@@ -55,6 +56,7 @@ namespace Podoboo
                 radioButton2.Checked = false;
                 radioButton3.Checked = false;
                 radioButton4.Checked = true;
+                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/clsptool/csprites.txt");
             }
             if (spritetooltouse == "pixi")
             {
@@ -62,8 +64,8 @@ namespace Podoboo
                 radioButton2.Checked = true;
                 radioButton3.Checked = false;
                 radioButton4.Checked = false;
+                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/pixi/list.txt");
             }
-            
             textBox2.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/spritetip/list.txt");
         }
 
@@ -115,6 +117,12 @@ namespace Podoboo
             proc.StartInfo.FileName = Properties.Settings.Default.installDirectory + "files/spritetip/SpriteTip.exe";
             proc.StartInfo.WorkingDirectory = Properties.Settings.Default.installDirectory + "files/spritetip/";
             proc.Start();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Thread import = new Thread((ThreadStart)delegate { Application.Run(new ImportSprites()); });
+            import.Start();
         }
     }
 }
