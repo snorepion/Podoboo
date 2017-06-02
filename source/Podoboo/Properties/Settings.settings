@@ -41,5 +41,23 @@
     <Setting Name="newItemString" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="usedSprites" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="spritetoolOption" Type="System.String" Scope="User">
+      <Value Profile="(Default)">romi</Value>
+    </Setting>
+    <Setting Name="insertedSprites_romi" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="insertedSprites_cluster" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="insertedSprites_ow" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="insertedSprites_pixi" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

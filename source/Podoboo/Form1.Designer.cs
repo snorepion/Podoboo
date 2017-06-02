@@ -81,12 +81,11 @@
             this.romisSpritetoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pIXIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clusterSpritetoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.overworldSpritetoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spriteTIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iggyAndLarryBossToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.overworldSpritetoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.romisSpritetoolSpriteConfigEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spriteGFXCreatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tesseraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tweakerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blocksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gopherPopcornStewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -210,7 +209,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(867, 23);
+            this.menuStrip1.Size = new System.Drawing.Size(867, 42);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -300,7 +299,6 @@
             this.listtxtToolStripMenuItem.Name = "listtxtToolStripMenuItem";
             this.listtxtToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.listtxtToolStripMenuItem.Text = "List.txt";
-            this.listtxtToolStripMenuItem.Click += new System.EventHandler(this.listtxtToolStripMenuItem_Click);
             // 
             // podobooToolStripMenuItem
             // 
@@ -535,12 +533,11 @@
             this.romisSpritetoolToolStripMenuItem,
             this.pIXIToolStripMenuItem,
             this.clusterSpritetoolToolStripMenuItem,
+            this.overworldSpritetoolToolStripMenuItem,
             this.spriteTIPToolStripMenuItem,
             this.iggyAndLarryBossToolStripMenuItem,
-            this.overworldSpritetoolToolStripMenuItem,
             this.romisSpritetoolSpriteConfigEditorToolStripMenuItem,
             this.spriteGFXCreatorToolStripMenuItem,
-            this.tesseraToolStripMenuItem,
             this.tweakerToolStripMenuItem});
             this.spritesToolStripMenuItem.Name = "spritesToolStripMenuItem";
             this.spritesToolStripMenuItem.Size = new System.Drawing.Size(54, 19);
@@ -551,36 +548,41 @@
             this.romisSpritetoolToolStripMenuItem.Name = "romisSpritetoolToolStripMenuItem";
             this.romisSpritetoolToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.romisSpritetoolToolStripMenuItem.Text = "Romi\'s Spritetool";
+            this.romisSpritetoolToolStripMenuItem.Click += new System.EventHandler(this.romisSpritetoolToolStripMenuItem_Click);
             // 
             // pIXIToolStripMenuItem
             // 
             this.pIXIToolStripMenuItem.Name = "pIXIToolStripMenuItem";
             this.pIXIToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.pIXIToolStripMenuItem.Text = "PIXI";
+            this.pIXIToolStripMenuItem.Click += new System.EventHandler(this.pIXIToolStripMenuItem_Click);
             // 
             // clusterSpritetoolToolStripMenuItem
             // 
             this.clusterSpritetoolToolStripMenuItem.Name = "clusterSpritetoolToolStripMenuItem";
             this.clusterSpritetoolToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.clusterSpritetoolToolStripMenuItem.Text = "Cluster Spritetool";
-            // 
-            // spriteTIPToolStripMenuItem
-            // 
-            this.spriteTIPToolStripMenuItem.Name = "spriteTIPToolStripMenuItem";
-            this.spriteTIPToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
-            this.spriteTIPToolStripMenuItem.Text = "SpriteTIP";
-            // 
-            // iggyAndLarryBossToolStripMenuItem
-            // 
-            this.iggyAndLarryBossToolStripMenuItem.Name = "iggyAndLarryBossToolStripMenuItem";
-            this.iggyAndLarryBossToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
-            this.iggyAndLarryBossToolStripMenuItem.Text = "Iggy and Larry Boss Fight Editor";
+            this.clusterSpritetoolToolStripMenuItem.Click += new System.EventHandler(this.clusterSpritetoolToolStripMenuItem_Click);
             // 
             // overworldSpritetoolToolStripMenuItem
             // 
             this.overworldSpritetoolToolStripMenuItem.Name = "overworldSpritetoolToolStripMenuItem";
             this.overworldSpritetoolToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.overworldSpritetoolToolStripMenuItem.Text = "Overworld Spritetool";
+            this.overworldSpritetoolToolStripMenuItem.Click += new System.EventHandler(this.overworldSpritetoolToolStripMenuItem_Click);
+            // 
+            // spriteTIPToolStripMenuItem
+            // 
+            this.spriteTIPToolStripMenuItem.Name = "spriteTIPToolStripMenuItem";
+            this.spriteTIPToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.spriteTIPToolStripMenuItem.Text = "SpriteTIP";
+            this.spriteTIPToolStripMenuItem.Click += new System.EventHandler(this.spriteTIPToolStripMenuItem_Click);
+            // 
+            // iggyAndLarryBossToolStripMenuItem
+            // 
+            this.iggyAndLarryBossToolStripMenuItem.Name = "iggyAndLarryBossToolStripMenuItem";
+            this.iggyAndLarryBossToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.iggyAndLarryBossToolStripMenuItem.Text = "Iggy and Larry Boss Fight Editor";
             // 
             // romisSpritetoolSpriteConfigEditorToolStripMenuItem
             // 
@@ -593,12 +595,6 @@
             this.spriteGFXCreatorToolStripMenuItem.Name = "spriteGFXCreatorToolStripMenuItem";
             this.spriteGFXCreatorToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.spriteGFXCreatorToolStripMenuItem.Text = "Sprite GFX Creator";
-            // 
-            // tesseraToolStripMenuItem
-            // 
-            this.tesseraToolStripMenuItem.Name = "tesseraToolStripMenuItem";
-            this.tesseraToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
-            this.tesseraToolStripMenuItem.Text = "Tessera";
             // 
             // tweakerToolStripMenuItem
             // 
@@ -1016,7 +1012,7 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.richTextBox1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(867, 501);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(867, 482);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -1169,7 +1165,6 @@
         private System.Windows.Forms.ToolStripMenuItem sMWCustomizerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem spriteGFXCreatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem spriteGFXCreatorToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem tesseraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terraStripeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statusEffectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statusBarEditorToolStripMenuItem1;

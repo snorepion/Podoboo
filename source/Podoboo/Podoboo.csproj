@@ -71,17 +71,17 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImportSprites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportSprites.Designer.cs">
+      <DependentUpon>ImportSprites.cs</DependentUpon>
+    </Compile>
     <Compile Include="Installer1.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Installer1.Designer.cs">
       <DependentUpon>Installer1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListConfig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListConfig.Designer.cs">
-      <DependentUpon>ListConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="Options.cs">
       <SubType>Form</SubType>
@@ -111,11 +111,11 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAppearanceEditor.resx" />
+    <EmbeddedResource Include="ImportSprites.resx">
+      <DependentUpon>ImportSprites.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Installer1.resx">
       <DependentUpon>Installer1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListConfig.resx">
-      <DependentUpon>ListConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Options.resx">
       <DependentUpon>Options.cs</DependentUpon>

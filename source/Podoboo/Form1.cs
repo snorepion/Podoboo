@@ -28,7 +28,7 @@ namespace Podoboo
             if (Settings.Default.uiTheme == "blue") { coolTheme(); }
             if (Settings.Default.uiTheme == "red") { lavaTheme(); }
             if (Settings.Default.uiTheme == "dark") { darkTheme(); }
-            if (Settings.Default.uiTheme == "blue") { lightTheme(); }
+            if (Settings.Default.uiTheme == "light") { lightTheme(); }
         }
 
         private void listToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,12 +77,7 @@ namespace Podoboo
             Thread settings2 = new Thread((ThreadStart)delegate { Application.Run(new Options()); });
             settings2.Start();
         }
-
-        private void listtxtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Thread listtxt = new Thread((ThreadStart)delegate { Application.Run(new ListConfig()); });
-            listtxt.Start();
-        }
+        
 
         private void lightToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -178,6 +173,48 @@ namespace Podoboo
             this.BackColor = Color.FromArgb(255, 45, 45, 45);
             menuStrip1.ForeColor = Color.White;
             statusStrip1.ForeColor = Color.White;
+        }
+
+        private void romisSpritetoolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.spritetoolOption = "romi";
+            Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.Start();
+        }
+
+        private void pIXIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.spritetoolOption = "pixi";
+            Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.Start();
+        }
+
+        private void clusterSpritetoolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.spritetoolOption = "cst";
+            Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.Start();
+        }
+
+        private void overworldSpritetoolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.spritetoolOption = "owst";
+            Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.Start();
+        }
+
+        private void tesseraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.spritetoolOption = "tessera";
+            Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.Start();
+        }
+
+        private void spriteTIPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.spritetoolOption = "";
+            Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.Start();
         }
     }
 }

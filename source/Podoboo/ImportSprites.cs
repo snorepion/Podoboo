@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Podoboo
 {
-    public partial class ListConfig : Form
+    public partial class ImportSprites : Form
     {
-        public ListConfig()
+        public ImportSprites()
         {
             InitializeComponent();
         }

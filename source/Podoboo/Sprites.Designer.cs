@@ -41,7 +41,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -104,10 +103,10 @@
             // 
             this.button1.Location = new System.Drawing.Point(298, 226);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 24);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Save Used Sprites List";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Size = new System.Drawing.Size(102, 24);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Save";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // checkedListBox1
             // 
@@ -124,23 +123,7 @@
             "88",
             "96",
             "A7",
-            "B5",
-            "E7",
-            "EB",
-            "EC",
-            "EE",
-            "F0",
-            "F1",
-            "F6",
-            "F7",
-            "F8",
-            "F9",
-            "FA",
-            "FB",
-            "FC",
-            "FD",
-            "FE",
-            "FF"});
+            "B5"});
             this.checkedListBox1.Location = new System.Drawing.Point(298, 36);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(104, 184);
@@ -168,48 +151,37 @@
             // 
             this.button4.Location = new System.Drawing.Point(93, 256);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 23);
-            this.button4.TabIndex = 10;
+            this.button4.Size = new System.Drawing.Size(86, 23);
+            this.button4.TabIndex = 20;
             this.button4.Text = "Export List.txt";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(406, 256);
+            this.button5.Location = new System.Drawing.Point(498, 256);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 23);
-            this.button5.TabIndex = 11;
+            this.button5.Size = new System.Drawing.Size(118, 23);
+            this.button5.TabIndex = 19;
             this.button5.Text = "Export SpriteTIP list";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(532, 256);
+            this.button3.Location = new System.Drawing.Point(406, 256);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 23);
-            this.button3.TabIndex = 12;
+            this.button3.Size = new System.Drawing.Size(86, 23);
+            this.button3.TabIndex = 18;
             this.button3.Text = "Run SpriteTIP";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(406, 12);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(63, 17);
-            this.radioButton5.TabIndex = 13;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Tessera";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(191, 256);
+            this.button6.Location = new System.Drawing.Point(185, 256);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(101, 23);
-            this.button6.TabIndex = 14;
+            this.button6.Size = new System.Drawing.Size(107, 23);
+            this.button6.TabIndex = 17;
             this.button6.Text = "Tweaker";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -237,7 +209,6 @@
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.radioButton5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -253,6 +224,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Sprites";
             this.Text = "Podoboo - Add Sprites";
+            this.Load += new System.EventHandler(this.Sprites_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +244,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;

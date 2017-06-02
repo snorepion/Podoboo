@@ -3,7 +3,6 @@ D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\bin\Debug\Podoboo.exe
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\bin\Debug\Podoboo.pdb
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.csprojResolveAssemblyReference.cache
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.Form1.resources
-D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.ListConfig.resources
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.Properties.Resources.resources
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.csproj.GenerateResource.Cache
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.exe
@@ -13,3 +12,5 @@ D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo._kas
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.Asar_.resources
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.Form2.resources
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.Installer1.resources
+D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.frmAppearanceEditor.resources
+D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.Sprites.resources

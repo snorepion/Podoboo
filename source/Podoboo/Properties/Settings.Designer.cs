@@ -178,5 +178,77 @@ namespace Podoboo.Properties {
                 this["newItemString"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string usedSprites {
+            get {
+                return ((string)(this["usedSprites"]));
+            }
+            set {
+                this["usedSprites"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("romi")]
+        public string spritetoolOption {
+            get {
+                return ((string)(this["spritetoolOption"]));
+            }
+            set {
+                this["spritetoolOption"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string insertedSprites_romi {
+            get {
+                return ((string)(this["insertedSprites_romi"]));
+            }
+            set {
+                this["insertedSprites_romi"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string insertedSprites_cluster {
+            get {
+                return ((string)(this["insertedSprites_cluster"]));
+            }
+            set {
+                this["insertedSprites_cluster"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string insertedSprites_ow {
+            get {
+                return ((string)(this["insertedSprites_ow"]));
+            }
+            set {
+                this["insertedSprites_ow"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string insertedSprites_pixi {
+            get {
+                return ((string)(this["insertedSprites_pixi"]));
+            }
+            set {
+                this["insertedSprites_pixi"] = value;
+            }
+        }
     }
 }
