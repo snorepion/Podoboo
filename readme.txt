@@ -26,6 +26,5 @@ HuFlungDu - Status Effect
 uyuyuy99 - SMW Customizer
 Smallhacker - Terra Stripe, Enemy Names export/import, SMW Thank You Message Importer, Misc. Text Editor, Iggy/Larry Battle Tools, Status Bar Editor, Player Tilemap Editor
 Parasyte - Recover Lunar Magic
-imamelia - Tessera
 Romi - Spritetool, xkas
 snorepion - Podoboo, Podoboo Spritetool Manager
