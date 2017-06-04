@@ -1,5 +1,5 @@
-// romi cluster overworld pixi tessera (prompts for installation)
-+1 @rs; @ct; @ow; @px; @te;
+// romi cluster overworld pixi
++1 @rs; @ct; @ow; @px;
 // standard generator shooter
 +2 stand; gen; shoot;
 // this directory, different directory
@@ -10,3 +10,5 @@
 +5 def; pod + {directory}; {directory};
 // add to sprite database: no/yes
 +6 0; 1;
+// add pdbo to sprite database if 6 is 0: put in anything
++7 [optional] {anything}

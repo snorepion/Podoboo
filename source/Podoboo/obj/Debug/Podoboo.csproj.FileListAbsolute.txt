@@ -15,3 +15,4 @@ D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.Inst
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.frmAppearanceEditor.resources
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.Sprites.resources
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.ImportSprites.resources
+D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.SpriteDatabase.resources

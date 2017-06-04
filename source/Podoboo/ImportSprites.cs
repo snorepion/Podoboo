@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Podoboo
@@ -22,62 +23,22 @@ namespace Podoboo
         {
 
         }
-        /// PDBSP reads line 1 as the Spritetool to use. @rs is Romi's ST, @px is PIXI, @ow is Overworld ST, and @ct is Cluster ST.
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked)
-            {
 
-            }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog importSprites = new OpenFileDialog();
+            importSprites.Filter = "Assembly sprites|*.asm|Sprite configuration files|*.cfg|All files|*.*";
+            importSprites.Multiselect = true;
+            importSprites.FileName = "Sprite.asm";
+            importSprites.Title = "Import Sprites";
+            
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            if (radioButton2.Checked) {
-
-            }
+            Thread database = new Thread((ThreadStart)delegate { Application.Run(new SpriteDatabase()); });
+            database.TrySetApartmentState(ApartmentState.STA);
+            database.Start();
         }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton3.Checked)
-            {
-
-            }
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton4.Checked)
-            {
-
-            }
-        }
-
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-           if (radioButton5.Checked)
-            {
-
-            }
-        }
-
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton6.Checked)
-            {
-
-            }
-        }
-
-        private void radioButton7_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton7.Checked)
-            {
-
-            }
-        }
-
     }
 }

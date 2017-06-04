@@ -92,6 +92,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="SpriteDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpriteDatabase.Designer.cs">
+      <DependentUpon>SpriteDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sprites.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SpriteDatabase.resx">
+      <DependentUpon>SpriteDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sprites.resx">
       <DependentUpon>Sprites.cs</DependentUpon>
     </EmbeddedResource>

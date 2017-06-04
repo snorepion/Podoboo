@@ -250,5 +250,16 @@ namespace Podoboo.Properties {
                 this["insertedSprites_pixi"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection spriteDatabase {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["spriteDatabase"]));
+            }
+            set {
+                this["spriteDatabase"] = value;
+            }
+        }
     }
 }
