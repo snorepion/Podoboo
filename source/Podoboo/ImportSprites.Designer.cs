@@ -37,15 +37,8 @@
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pdbspContentsTextBox = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,7 +117,7 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(6, 65);
+            this.radioButton7.Location = new System.Drawing.Point(6, 66);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(72, 17);
             this.radioButton7.TabIndex = 8;
@@ -145,110 +138,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sprite Type";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(331, 36);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 48);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Import";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(331, 90);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 56);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Save PDBSP";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // pdbspContentsTextBox
-            // 
-            this.pdbspContentsTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pdbspContentsTextBox.Location = new System.Drawing.Point(115, 36);
-            this.pdbspContentsTextBox.Multiline = true;
-            this.pdbspContentsTextBox.Name = "pdbspContentsTextBox";
-            this.pdbspContentsTextBox.ReadOnly = true;
-            this.pdbspContentsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.pdbspContentsTextBox.Size = new System.Drawing.Size(210, 176);
-            this.pdbspContentsTextBox.TabIndex = 12;
-            this.pdbspContentsTextBox.Text = "startfile\r\n/example PDBSP/ @rs;\r\nthisdir: false\r\npdir: false \r\nC:/Sprites/\r\ntype:" +
-    " standard\r\nsprite1, sprite2, bosses/boss1, bosses/boss2/boss2\r\nDEFAULT\r\nendfile";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 218);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(242, 17);
-            this.checkBox1.TabIndex = 13;
-            this.checkBox1.Text = "PDBSP finds sprites in the same directory as it";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(12, 241);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(227, 17);
-            this.checkBox2.TabIndex = 14;
-            this.checkBox2.Text = "PDBSP finds sprites in Podoboo\'s directory";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 132);
+            this.button1.Location = new System.Drawing.Point(115, 36);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Choose Directory";
+            this.button1.Size = new System.Drawing.Size(83, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Import Sprites";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // button2
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 162);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(96, 20);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "Sprite name without .asm or .cfg";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(12, 189);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 23);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Add to PDBSP";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(331, 152);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(97, 60);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Enable Manual Editing (not recommended!)";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(204, 36);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Import from PDBO";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // ImportSprites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 265);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.pdbspContentsTextBox);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(435, 142);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
@@ -275,14 +189,7 @@
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox pdbspContentsTextBox;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button2;
     }
 }

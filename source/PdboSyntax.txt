@@ -1,0 +1,12 @@
+// romi cluster overworld pixi tessera (prompts for installation)
++1 @rs; @ct; @ow; @px; @te;
+// standard generator shooter
++2 stand; gen; shoot;
+// this directory, different directory
++3 td; dd; [if dd specify in next line]
+// this directory, specify dd
++4 td; {directory};
+// default, podoboo directory, chosen extraction directory0
++5 def; pod + {directory}; {directory};
+// add to sprite database: no/yes
++6 0; 1;

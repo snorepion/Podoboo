@@ -179,6 +179,7 @@ namespace Podoboo
         {
             Settings.Default.spritetoolOption = "romi";
             Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.TrySetApartmentState(ApartmentState.STA);
             addsprites.Start();
         }
 
@@ -186,6 +187,7 @@ namespace Podoboo
         {
             Settings.Default.spritetoolOption = "pixi";
             Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.TrySetApartmentState(ApartmentState.STA);
             addsprites.Start();
         }
 
@@ -193,6 +195,7 @@ namespace Podoboo
         {
             Settings.Default.spritetoolOption = "cst";
             Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.TrySetApartmentState(ApartmentState.STA);
             addsprites.Start();
         }
 
@@ -200,6 +203,7 @@ namespace Podoboo
         {
             Settings.Default.spritetoolOption = "owst";
             Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.TrySetApartmentState(ApartmentState.STA);
             addsprites.Start();
         }
 
@@ -207,6 +211,7 @@ namespace Podoboo
         {
             Settings.Default.spritetoolOption = "tessera";
             Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.TrySetApartmentState(ApartmentState.STA);
             addsprites.Start();
         }
 
@@ -214,6 +219,7 @@ namespace Podoboo
         {
             Settings.Default.spritetoolOption = "";
             Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
+            addsprites.TrySetApartmentState(ApartmentState.STA);
             addsprites.Start();
         }
     }

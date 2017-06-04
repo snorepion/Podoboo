@@ -122,6 +122,7 @@ namespace Podoboo
         private void button8_Click(object sender, EventArgs e)
         {
             Thread import = new Thread((ThreadStart)delegate { Application.Run(new ImportSprites()); });
+            import.TrySetApartmentState(ApartmentState.STA);
             import.Start();
         }
     }
