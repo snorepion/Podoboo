@@ -75,8 +75,6 @@
             this.asarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xkasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uberASMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xkasPodobooGUIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.romisSpritetoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pIXIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -209,7 +207,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(867, 23);
+            this.menuStrip1.Size = new System.Drawing.Size(867, 42);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -395,20 +393,20 @@
             // listToolStripMenuItem
             // 
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
-            this.listToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.listToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listToolStripMenuItem.Text = "Credits";
             this.listToolStripMenuItem.Click += new System.EventHandler(this.listToolStripMenuItem_Click);
             // 
             // iconsToolStripMenuItem
             // 
             this.iconsToolStripMenuItem.Name = "iconsToolStripMenuItem";
-            this.iconsToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.iconsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.iconsToolStripMenuItem.Text = "Help";
             // 
             // githubToolStripMenuItem
             // 
             this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
-            this.githubToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.githubToolStripMenuItem.Text = "Github";
             // 
             // levelsOverworldToolStripMenuItem
@@ -489,9 +487,7 @@
             this.aSMToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.asarToolStripMenuItem,
             this.xkasToolStripMenuItem,
-            this.uberASMToolStripMenuItem,
-            this.xkasPodobooGUIToolStripMenuItem,
-            this.kasToolStripMenuItem});
+            this.uberASMToolStripMenuItem});
             this.aSMToolStripMenuItem.Name = "aSMToolStripMenuItem";
             this.aSMToolStripMenuItem.Size = new System.Drawing.Size(44, 19);
             this.aSMToolStripMenuItem.Text = "ASM";
@@ -499,33 +495,20 @@
             // asarToolStripMenuItem
             // 
             this.asarToolStripMenuItem.Name = "asarToolStripMenuItem";
-            this.asarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.asarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.asarToolStripMenuItem.Text = "Asar";
             // 
             // xkasToolStripMenuItem
             // 
             this.xkasToolStripMenuItem.Name = "xkasToolStripMenuItem";
-            this.xkasToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.xkasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.xkasToolStripMenuItem.Text = "xkas";
             // 
             // uberASMToolStripMenuItem
             // 
             this.uberASMToolStripMenuItem.Name = "uberASMToolStripMenuItem";
-            this.uberASMToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.uberASMToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.uberASMToolStripMenuItem.Text = "UberASM";
-            // 
-            // xkasPodobooGUIToolStripMenuItem
-            // 
-            this.xkasPodobooGUIToolStripMenuItem.Name = "xkasPodobooGUIToolStripMenuItem";
-            this.xkasPodobooGUIToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.xkasPodobooGUIToolStripMenuItem.Text = "Asar+";
-            // 
-            // kasToolStripMenuItem
-            // 
-            this.kasToolStripMenuItem.Name = "kasToolStripMenuItem";
-            this.kasToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.kasToolStripMenuItem.Text = "+kas";
-            this.kasToolStripMenuItem.Click += new System.EventHandler(this.kasToolStripMenuItem_Click);
             // 
             // spritesToolStripMenuItem
             // 
@@ -1012,7 +995,7 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.richTextBox1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(867, 501);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(867, 482);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -1107,8 +1090,6 @@
         private System.Windows.Forms.ToolStripMenuItem addASMFilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addROMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uberASMToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xkasPodobooGUIToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem patchesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emulationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blockreatorToolStripMenuItem;

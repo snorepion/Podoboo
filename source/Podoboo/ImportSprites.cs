@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
+using Podoboo.Properties;
 
 namespace Podoboo
 {
@@ -17,8 +19,8 @@ namespace Podoboo
         {
             InitializeComponent();
         }
-
-        /// PDBSP sprite packages
+        int index_var = 0;
+        /// PDBO sprite packages
         private void ImportSprites_Load(object sender, EventArgs e)
         {
 
@@ -26,12 +28,30 @@ namespace Podoboo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string spritetool = "files/UnassignedSprites";
+            if (radioButton1.Checked == true)
+            {
+                if (radioButton5.Checked == true)
+                {
+                    spritetool = "files/rsprt/sprites";
+                }
+            }
             OpenFileDialog importSprites = new OpenFileDialog();
-            importSprites.Filter = "Assembly sprites|*.asm|Sprite configuration files|*.cfg|All files|*.*";
+            importSprites.Filter = "Assembly sprites|*.asm";
             importSprites.Multiselect = true;
             importSprites.FileName = "Sprite.asm";
             importSprites.Title = "Import Sprites";
-            
+            if (importSprites.ShowDialog() == DialogResult.OK)
+            {
+                string[] files = importSprites.FileNames;
+                foreach (string sprt in files)
+                {
+                    string filename = Path.GetFileNameWithoutExtension(importSprites.FileNames[index_var]);
+                    File.Copy(importSprites.FileNames[index_var], Path.Combine(Settings.Default.installDirectory, spritetool, "/", filename));
+                    File.Copy(Path.Combine(Path.GetDirectoryName(importSprites.FileName), filename, ".cfg"), Path.Combine(Settings.Default.installDirectory, spritetool, "/", filename));
+                    index_var += 1;
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

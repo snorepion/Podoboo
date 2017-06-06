@@ -142,9 +142,8 @@
             this.button1.Size = new System.Drawing.Size(120, 23);
             this.button1.TabIndex = 10;
             this.button1.Text = "Import Sprites";
-            this.toolTip1.SetToolTip(this.button1, "Choose *either* the ASM files or CFG files that you want. \r\nPodoboo will automati" +
-        "cally detect the other (either ASM or CFG) file and import the sprite(s) accordi" +
-        "ngly.");
+            this.toolTip1.SetToolTip(this.button1, "While the picker only allows you to choose ASM files, it will automatically detec" +
+        "t the CFG files with the same name and import them to your chosen spritetool.");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

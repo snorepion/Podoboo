@@ -60,12 +60,7 @@ namespace Podoboo
 
         }
 
-        private void kasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // run +kas in new thread so that podoboo can close without also closing +kas, and vice versa
-            Thread kas2 = new Thread((ThreadStart)delegate { Application.Run(new _kas()); });
-            kas2.Start();
-        }
+
 
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
         {

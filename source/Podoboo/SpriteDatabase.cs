@@ -14,7 +14,8 @@ namespace Podoboo
 {
     public partial class SpriteDatabase : Form
     {
-        string[] sprites;
+        int index = 0;
+        List<string> list = new List<string>();
         string directory = Settings.Default.installDirectory;
         public SpriteDatabase()
         {
@@ -23,8 +24,12 @@ namespace Podoboo
 
         private void SpriteDatabase_Load(object sender, EventArgs e)
         {
-            sprites = Directory.GetFiles(directory, "*.cfg", SearchOption.AllDirectories); 
-            textBox1.Text = string.Join("", sprites);
+            foreach (string s in Directory.GetFiles(directory, "*.cfg", SearchOption.AllDirectories))
+            {
+                list.Add(s.Remove(0, s.LastIndexOf(Path.DirectorySeparatorChar) + 1));
+                textBox1.Text += list[index].ToString() + "\r\n";
+                index += 1;
+            }
         }
     }
 }
