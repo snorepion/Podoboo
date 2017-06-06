@@ -1,2 +1,4 @@
 source/Podoboo/frmAppearanceEditor.resx
 *.smc
+*.pbk
+source/Podoboo/files/backup
