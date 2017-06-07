@@ -33,6 +33,8 @@ namespace Podoboo
             if (Settings.Default.uiTheme == "red") { lavaTheme(); }
             if (Settings.Default.uiTheme == "dark") { darkTheme(); }
             if (Settings.Default.uiTheme == "light") { lightTheme(); }
+            Settings.Default.errorLog += Environment.NewLine;
+            Settings.Default.errorLog += "start Form1.cs@" + DateTime.Now.ToString() + Environment.NewLine;
         }
 
         private void listToolStripMenuItem_Click(object sender, EventArgs e)
@@ -224,19 +226,32 @@ namespace Podoboo
 
         private void gopherPopcornStewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BackupRom(Settings.Default.installDirectory + "files/backup/gps.pbk");
-        }
-        private void BackupRom(string destination)
-        {
-            System.IO.File.Copy(Settings.Default.romPath, destination);
+            SmfcToPbk(Settings.Default.romPath, "gps.pbk");
         }
         private void SmfcToPbk(string rom, string bkname)
         {
             FileInfo dinfo = new FileInfo(Settings.Default.installDirectory + "files/backup/temp/" + bkname);
-            FileStream fs = new FileStream(rom, FileMode.Open);
-            FileStream fs2 = new FileStream(dinfo.ToString(), FileMode.Create);
-            GZipStream compress = new GZipStream(fs2, CompressionMode.Compress, false);
-            fs.CopyTo(compress);
+            using (FileStream fs = dinfo.OpenRead())
+            {
+                try
+                {
+                    using (FileStream compressedFile = File.Create(Settings.Default.installDirectory + "files/backup/temp/" + bkname))
+                    {
+                        using (GZipStream compress = new GZipStream(compressedFile, CompressionMode.Compress, false))
+                        {
+                            fs.CopyTo(compress);
+                        }
+                    }
+                }
+                catch (IOException ioe) {
+                    statusStrip1.Text = "ROM could not be backed up, check error log.";
+                    Settings.Default.errorLog += Environment.NewLine;
+                    Settings.Default.errorLog += ioe.ToString();
+                    Settings.Default.errorLog += Environment.NewLine;
+                    Settings.Default.Save();
+                }
+            }
+        
         }
     }
 }

@@ -265,12 +265,12 @@ namespace Podoboo.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
+        public string errorLog {
             get {
-                return ((string)(this["Setting"]));
+                return ((string)(this["errorLog"]));
             }
             set {
-                this["Setting"] = value;
+                this["errorLog"] = value;
             }
         }
     }
