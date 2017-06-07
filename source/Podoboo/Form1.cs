@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using Podoboo.Properties;
+using System.IO;
+using System.IO.Compression;
+using System.IO.IsolatedStorage;
 
 
 namespace Podoboo
@@ -21,6 +24,7 @@ namespace Podoboo
         }
         bool readmemode;
         bool hidemode;
+        string destination = "";
         private void Form1_Load(object sender, EventArgs e)
         {
             Podoboo.Properties.Settings.Default.hasCompletedSetup = true;
@@ -216,6 +220,23 @@ namespace Podoboo
             Thread addsprites = new Thread((ThreadStart)delegate { Application.Run(new Sprites()); });
             addsprites.TrySetApartmentState(ApartmentState.STA);
             addsprites.Start();
+        }
+
+        private void gopherPopcornStewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackupRom(Settings.Default.installDirectory + "files/backup/gps.pbk");
+        }
+        private void BackupRom(string destination)
+        {
+            System.IO.File.Copy(Settings.Default.romPath, destination);
+        }
+        private void SmfcToPbk(string rom, string bkname)
+        {
+            FileInfo dinfo = new FileInfo(Settings.Default.installDirectory + "files/backup/temp/" + bkname);
+            FileStream fs = new FileStream(rom, FileMode.Open);
+            FileStream fs2 = new FileStream(dinfo.ToString(), FileMode.Create);
+            GZipStream compress = new GZipStream(fs2, CompressionMode.Compress, false);
+            fs.CopyTo(compress);
         }
     }
 }

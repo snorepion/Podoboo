@@ -47,8 +47,8 @@ namespace Podoboo
                 foreach (string sprt in files)
                 {
                     string filename = Path.GetFileNameWithoutExtension(importSprites.FileNames[index_var]);
-                    File.Copy(importSprites.FileNames[index_var], Path.Combine(Settings.Default.installDirectory, spritetool, "/", filename));
-                    File.Copy(Path.Combine(Path.GetDirectoryName(importSprites.FileName), filename, ".cfg"), Path.Combine(Settings.Default.installDirectory, spritetool, "/", filename));
+                    File.Copy(importSprites.FileNames[index_var], Path.Combine(Settings.Default.installDirectory, spritetool, "/") + filename + ".asm");
+                    File.Copy(Path.Combine(Path.GetDirectoryName(importSprites.FileName), "/") + filename + ".cfg", Path.Combine(Settings.Default.installDirectory, spritetool, "/") + filename + ".cfg", true);
                     index_var += 1;
                 }
             }

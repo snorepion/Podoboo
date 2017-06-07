@@ -393,20 +393,20 @@
             // listToolStripMenuItem
             // 
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
-            this.listToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.listToolStripMenuItem.Text = "Credits";
             this.listToolStripMenuItem.Click += new System.EventHandler(this.listToolStripMenuItem_Click);
             // 
             // iconsToolStripMenuItem
             // 
             this.iconsToolStripMenuItem.Name = "iconsToolStripMenuItem";
-            this.iconsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.iconsToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.iconsToolStripMenuItem.Text = "Help";
             // 
             // githubToolStripMenuItem
             // 
             this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
-            this.githubToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.githubToolStripMenuItem.Text = "Github";
             // 
             // levelsOverworldToolStripMenuItem
@@ -495,19 +495,19 @@
             // asarToolStripMenuItem
             // 
             this.asarToolStripMenuItem.Name = "asarToolStripMenuItem";
-            this.asarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.asarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.asarToolStripMenuItem.Text = "Asar";
             // 
             // xkasToolStripMenuItem
             // 
             this.xkasToolStripMenuItem.Name = "xkasToolStripMenuItem";
-            this.xkasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xkasToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.xkasToolStripMenuItem.Text = "xkas";
             // 
             // uberASMToolStripMenuItem
             // 
             this.uberASMToolStripMenuItem.Name = "uberASMToolStripMenuItem";
-            this.uberASMToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.uberASMToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.uberASMToolStripMenuItem.Text = "UberASM";
             // 
             // spritesToolStripMenuItem
@@ -600,6 +600,7 @@
             this.gopherPopcornStewToolStripMenuItem.Name = "gopherPopcornStewToolStripMenuItem";
             this.gopherPopcornStewToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.gopherPopcornStewToolStripMenuItem.Text = "Gopher Popcorn Stew";
+            this.gopherPopcornStewToolStripMenuItem.Click += new System.EventHandler(this.gopherPopcornStewToolStripMenuItem_Click);
             // 
             // blockreatorToolStripMenuItem
             // 
