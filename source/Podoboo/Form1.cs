@@ -78,7 +78,7 @@ namespace Podoboo
             Thread settings2 = new Thread((ThreadStart)delegate { Application.Run(new Options()); });
             settings2.Start();
         }
-        
+
 
         private void lightToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -230,7 +230,7 @@ namespace Podoboo
         }
         private void SmfcToPbk(string rom, string bkname)
         {
-            FileInfo dinfo = new FileInfo(Settings.Default.installDirectory + "files/backup/temp/" + bkname);
+            FileInfo dinfo = new FileInfo(rom);
             using (FileStream fs = dinfo.OpenRead())
             {
                 try
@@ -240,18 +240,49 @@ namespace Podoboo
                         using (GZipStream compress = new GZipStream(compressedFile, CompressionMode.Compress, false))
                         {
                             fs.CopyTo(compress);
+                            compress.Close();
+                            compressedFile.Close();
+                            fs.Close();
                         }
                     }
                 }
                 catch (IOException ioe) {
-                    statusStrip1.Text = "ROM could not be backed up, check error log.";
+                    toolStripStatusLabel1.Text = "ROM could not be backed up, check error log.";
                     Settings.Default.errorLog += Environment.NewLine;
                     Settings.Default.errorLog += ioe.ToString();
                     Settings.Default.errorLog += Environment.NewLine;
                     Settings.Default.Save();
                 }
             }
-        
+
+        }
+
+        private void errorLogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = Settings.Default.errorLog;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+        private void WipeFile(string file, bool backup, string backupfile)
+        {
+            File.WriteAllLines(file, null);
+        }
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.errorLog = "";
+            Settings.Default.Save();
+        }
+
+        private void backUpROMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog backupRom = new SaveFileDialog();
+            backupRom.DefaultExt = ".pbk";
+            backupRom.FileName = "ROM.pbk";
+            backupRom.Filter = "Podoboo backup files|*.pbk";
+            SmfcToPbk(Settings.Default.romPath, backupRom.FileName);
         }
     }
 }

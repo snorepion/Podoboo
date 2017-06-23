@@ -37,12 +37,11 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupRestoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backUpROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backUpPatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restoreROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restorePatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restorePatchToROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewReadmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listtxtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.podobooToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -216,7 +215,8 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backupRestoreToolStripMenuItem,
             this.selectROMToolStripMenuItem,
-            this.viewReadmeToolStripMenuItem});
+            this.viewReadmeToolStripMenuItem,
+            this.errorLogToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
             this.fileToolStripMenuItem.Text = "File";
@@ -225,10 +225,7 @@
             // 
             this.backupRestoreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backUpROMToolStripMenuItem,
-            this.backUpPatchToolStripMenuItem,
-            this.restoreROMToolStripMenuItem,
-            this.restorePatchToolStripMenuItem,
-            this.restorePatchToROMToolStripMenuItem});
+            this.restoreROMToolStripMenuItem});
             this.backupRestoreToolStripMenuItem.Name = "backupRestoreToolStripMenuItem";
             this.backupRestoreToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.backupRestoreToolStripMenuItem.Text = "Backup/Restore";
@@ -236,32 +233,15 @@
             // backUpROMToolStripMenuItem
             // 
             this.backUpROMToolStripMenuItem.Name = "backUpROMToolStripMenuItem";
-            this.backUpROMToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.backUpROMToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.backUpROMToolStripMenuItem.Text = "Back Up ROM";
-            // 
-            // backUpPatchToolStripMenuItem
-            // 
-            this.backUpPatchToolStripMenuItem.Name = "backUpPatchToolStripMenuItem";
-            this.backUpPatchToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.backUpPatchToolStripMenuItem.Text = "Back Up Patch";
+            this.backUpROMToolStripMenuItem.Click += new System.EventHandler(this.backUpROMToolStripMenuItem_Click);
             // 
             // restoreROMToolStripMenuItem
             // 
             this.restoreROMToolStripMenuItem.Name = "restoreROMToolStripMenuItem";
-            this.restoreROMToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.restoreROMToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.restoreROMToolStripMenuItem.Text = "Restore ROM";
-            // 
-            // restorePatchToolStripMenuItem
-            // 
-            this.restorePatchToolStripMenuItem.Name = "restorePatchToolStripMenuItem";
-            this.restorePatchToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.restorePatchToolStripMenuItem.Text = "Restore Patch";
-            // 
-            // restorePatchToROMToolStripMenuItem
-            // 
-            this.restorePatchToROMToolStripMenuItem.Name = "restorePatchToROMToolStripMenuItem";
-            this.restorePatchToROMToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.restorePatchToROMToolStripMenuItem.Text = "Restore Patch to ROM";
             // 
             // selectROMToolStripMenuItem
             // 
@@ -275,6 +255,22 @@
             this.viewReadmeToolStripMenuItem.Name = "viewReadmeToolStripMenuItem";
             this.viewReadmeToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.viewReadmeToolStripMenuItem.Text = "Readme Mode";
+            // 
+            // errorLogToolStripMenuItem
+            // 
+            this.errorLogToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearToolStripMenuItem});
+            this.errorLogToolStripMenuItem.Name = "errorLogToolStripMenuItem";
+            this.errorLogToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.errorLogToolStripMenuItem.Text = "Error Log";
+            this.errorLogToolStripMenuItem.Click += new System.EventHandler(this.errorLogToolStripMenuItem_Click);
+            // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // configureToolStripMenuItem
             // 
@@ -1035,6 +1031,7 @@
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Podoboo";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -1060,10 +1057,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backupRestoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backUpROMToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem backUpPatchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restoreROMToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem restorePatchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem restorePatchToROMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectROMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem levelsOverworldToolStripMenuItem;
@@ -1167,5 +1161,7 @@
         private System.Windows.Forms.ToolStripMenuItem lavaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem coolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem errorLogToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
     }
 }
