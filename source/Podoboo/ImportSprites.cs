@@ -25,17 +25,31 @@ namespace Podoboo
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string spritetool = "files/UnassignedSprites";
             if (radioButton1.Checked == true)
             {
                 if (radioButton5.Checked == true)
-                {
                     spritetool = "files/rsprt/sprites";
-                }
+                if (radioButton6.Checked == true)
+                    spritetool = "files/rsprt/shooters";
+                if (radioButton7.Checked == true)
+                    spritetool = "files/rsprt/generators";
             }
+            if (radioButton2.Checked == true)
+            {
+                if (radioButton5.Checked == true)
+                    spritetool = "files/pixi/sprites";
+                if (radioButton6.Checked == true)
+                    spritetool = "files/rsprt/shooters";
+                if (radioButton7.Checked == true)
+                    spritetool = "files/rsprt/sprites";
+            }
+            if (radioButton3.Checked == true)
+                spritetool = "files/owspt/osprites";
+            if (radioButton4.Checked == true)
+                spritetool = "files/clsptool/csprites";
             OpenFileDialog importSprites = new OpenFileDialog();
             importSprites.Filter = "Assembly sprites|*.asm";
             importSprites.Multiselect = true;
@@ -53,7 +67,6 @@ namespace Podoboo
                 }
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Thread database = new Thread((ThreadStart)delegate { Application.Run(new SpriteDatabase()); });

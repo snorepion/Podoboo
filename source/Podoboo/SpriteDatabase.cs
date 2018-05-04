@@ -21,7 +21,6 @@ namespace Podoboo
         {
             InitializeComponent();
         }
-
         private void SpriteDatabase_Load(object sender, EventArgs e)
         {
             foreach (string s in Directory.GetFiles(directory, "*.cfg", SearchOption.AllDirectories))
