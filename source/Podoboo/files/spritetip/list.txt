@@ -1,8 +1,0 @@
-0D 0 0 Bowser Jr.
-0D 0 1 Bowser Jr. He cannot be jumped on until a shell is kicked at him. Keep the ceiling open or the battle won't end.
-11 0 0 Crab
-12 0 0 Giant Buzzy Beetle
-12 0 1 A giant buzzy beetle that spins into a wall, where a rock falls down. If Mario grabs the rock and attacks this boss with it, he will be hurt.
-13 0 0 Giant goomba
-14 0 0 Huck-It Crab
-14 0 1 Huck-It Crab from NSMBW. It launches rocks until it's defeated.

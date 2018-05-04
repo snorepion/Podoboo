@@ -1,9 +1,0 @@
-0B 1111111 osprites/savepoint.asm
-0C 1111111 osprites/tank.asm
-0D 1111111 osprites/tornado.asm
-0E 1111111 osprites/wingyoshi.asm
-0F 1111111 osprites/airship.asm
-10 1111111 osprites/fast.asm
-11 1111111 osprites/hand.asm
-12 1111111 osprites/navi.asm
-13 1000000 DUPE:10
