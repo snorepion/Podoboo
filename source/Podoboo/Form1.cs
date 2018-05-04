@@ -12,7 +12,7 @@ using Podoboo.Properties;
 using System.IO;
 using System.IO.Compression;
 using System.IO.IsolatedStorage;
-
+using System.Diagnostics;
 
 namespace Podoboo
 {
@@ -22,6 +22,7 @@ namespace Podoboo
         {
             InitializeComponent();
         }
+        string rfs;
         bool readmemode;
         bool hidemode;
         string destination = "";
@@ -226,7 +227,7 @@ namespace Podoboo
 
         private void gopherPopcornStewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SmfcToPbk(Settings.Default.romPath, "gps.pbk");
+            SmfcToPbk(Settings.Default.romPath, "auto.pbk");
         }
         private void SmfcToPbk(string rom, string bkname)
         {
@@ -254,9 +255,15 @@ namespace Podoboo
                     Settings.Default.Save();
                 }
             }
-
+            ToolLaunch("files/gps/gps.exe", "files/gps/");
         }
-
+        private void ToolLaunch(string tool, string dir)
+        {
+            var proc = new Process();
+            proc.StartInfo.FileName = Properties.Settings.Default.installDirectory + tool;
+            proc.StartInfo.WorkingDirectory = Properties.Settings.Default.installDirectory + dir;
+            proc.Start();
+        }
         private void errorLogToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = Settings.Default.errorLog;
@@ -283,6 +290,47 @@ namespace Podoboo
             backupRom.FileName = "ROM.pbk";
             backupRom.Filter = "Podoboo backup files|*.pbk";
             SmfcToPbk(Settings.Default.romPath, backupRom.FileName);
+        }
+
+        private void restoreROMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fromAutomaticBackupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RestoreRom(Settings.Default.installDirectory + "files/temp/restore.pbk", "auto.pbk");
+        }
+        private void RestoreRom(string bkname, string oldname, bool isManual = false)
+        {
+            FileInfo dinfo = new FileInfo(bkname);
+            using (FileStream fs = dinfo.OpenRead())
+            {
+                try
+                {
+                    if (isManual == true) {  rfs = oldname; }
+                    if (isManual == false) {  rfs = Settings.Default.installDirectory + "files/temp/" + oldname; }
+                    using (FileStream restoreFile = File.OpenWrite(rfs))
+                    {
+                        using (GZipStream decompress = new GZipStream(restoreFile, CompressionMode.Decompress, false))
+                        {
+                            fs.CopyTo(decompress);
+                            decompress.Close();
+                            restoreFile.Close();
+                            fs.Close();
+                        }
+                    }
+                    File.Replace(rfs, Settings.Default.romPath, bkname);
+                }
+                catch (IOException ioe)
+                {
+                    toolStripStatusLabel1.Text = "ROM could not be restored, check error log.";
+                    Settings.Default.errorLog += Environment.NewLine;
+                    Settings.Default.errorLog += ioe.ToString();
+                    Settings.Default.errorLog += Environment.NewLine;
+                    Settings.Default.Save();
+                }
+            }
         }
     }
 }
