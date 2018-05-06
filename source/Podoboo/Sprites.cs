@@ -68,14 +68,12 @@ namespace Podoboo
             }
             textBox2.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/spritetip/list.txt");
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             var sprites = this.checkedListBox1.CheckedItems.Cast<string>().ToArray();
             Properties.Settings.Default.usedSprites = string.Join(",", sprites);
             Properties.Settings.Default.Save();
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
             var proc = new Process();
@@ -83,7 +81,6 @@ namespace Podoboo
             proc.StartInfo.WorkingDirectory = Properties.Settings.Default.installDirectory + "files/tweaker/";
             proc.Start();
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             SaveFileDialog listDotTxtSave = new SaveFileDialog();
@@ -96,7 +93,6 @@ namespace Podoboo
                 System.IO.File.WriteAllText(listDotTxtSave.FileName, textBox1.Text);
             }
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             SaveFileDialog stSave = new SaveFileDialog();
@@ -109,7 +105,6 @@ namespace Podoboo
                 System.IO.File.WriteAllText(stSave.FileName, textBox2.Text);
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             var proc = new Process();
@@ -118,12 +113,18 @@ namespace Podoboo
             proc.StartInfo.WorkingDirectory = Properties.Settings.Default.installDirectory + "files/spritetip/";
             proc.Start();
         }
-
         private void button8_Click(object sender, EventArgs e)
         {
             Thread import = new Thread((ThreadStart)delegate { Application.Run(new ImportSprites()); });
             import.TrySetApartmentState(ApartmentState.STA);
             import.Start();
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string sptipbase = Properties.Settings.Default.installDirectory + "files/spritetip/" + Path.GetFileNameWithoutExtension(Properties.Settings.Default.romPath);
+            string[] SptipOP = new string[] { sptipbase + ".ssc", sptipbase + ".mwt", sptipbase + ".mw2", sptipbase + ".s16" };
+            foreach (string s in SptipOP)
+                File.Move(s, "files/lm/" + Path.GetFileName(s));
         }
     }
 }

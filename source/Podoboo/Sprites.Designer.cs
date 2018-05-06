@@ -191,6 +191,7 @@
             this.button7.TabIndex = 15;
             this.button7.Text = "Add SpriteTIP output to LM";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 

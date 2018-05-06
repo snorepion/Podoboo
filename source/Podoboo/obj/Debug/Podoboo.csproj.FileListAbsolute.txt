@@ -13,3 +13,4 @@ D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.frmA
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.Sprites.resources
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.ImportSprites.resources
 D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.SpriteDatabase.resources
+D:\Games\Sneslib\Lunar Magic\Tools\Podoboo\source\Podoboo\obj\Debug\Podoboo.csproj.CoreCompileInputs.cache
