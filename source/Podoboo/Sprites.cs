@@ -32,40 +32,7 @@ namespace Podoboo
                         this.checkedListBox1.SetItemChecked(index, true);
                     });
             }
-            string spritetooltouse = Properties.Settings.Default.spritetoolOption;
-            if (spritetooltouse == "romi")
-            {
-                radioButton1.Checked = true;
-                radioButton2.Checked = false;
-                radioButton3.Checked = false;
-                radioButton4.Checked = false;
-                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/owspt/osprites.txt");
-            }
-            
-            if (spritetooltouse == "owst")
-            {
-                radioButton1.Checked = false;
-                radioButton2.Checked = false;
-                radioButton3.Checked = true;
-                radioButton4.Checked = false;
-                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/pixi/list.txt");
-            }
-            if (spritetooltouse == "cst")
-            {
-                radioButton1.Checked = false;
-                radioButton2.Checked = false;
-                radioButton3.Checked = false;
-                radioButton4.Checked = true;
-                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/clsptool/csprites.txt");
-            }
-            if (spritetooltouse == "pixi")
-            {
-                radioButton1.Checked = false;
-                radioButton2.Checked = true;
-                radioButton3.Checked = false;
-                radioButton4.Checked = false;
-                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/pixi/list.txt");
-            }
+            CheckSptoolType();
             textBox2.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/spritetip/list.txt");
         }
         private void button1_Click(object sender, EventArgs e)
@@ -90,7 +57,7 @@ namespace Podoboo
             listDotTxtSave.Filter = "Text files|*.txt";
             if (listDotTxtSave.ShowDialog() == DialogResult.OK)
             {
-                System.IO.File.WriteAllText(listDotTxtSave.FileName, textBox1.Text);
+                File.WriteAllText(listDotTxtSave.FileName, textBox1.Text);
             }
         }
         private void button5_Click(object sender, EventArgs e)
@@ -125,6 +92,56 @@ namespace Podoboo
             string[] SptipOP = new string[] { sptipbase + ".ssc", sptipbase + ".mwt", sptipbase + ".mw2", sptipbase + ".s16" };
             foreach (string s in SptipOP)
                 File.Move(s, "files/lm/" + Path.GetFileName(s));
+        }
+        void CheckSptoolType()
+        {
+            string spritetooltouse = Properties.Settings.Default.spritetoolOption;
+            if (spritetooltouse == "romi")
+            {
+                radioButton1.Checked = true;
+                radioButton2.Checked = false;
+                radioButton3.Checked = false;
+                radioButton4.Checked = false;
+                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/owspt/osprites.txt");
+            }
+
+            if (spritetooltouse == "owst")
+            {
+                radioButton1.Checked = false;
+                radioButton2.Checked = false;
+                radioButton3.Checked = true;
+                radioButton4.Checked = false;
+                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/pixi/list.txt");
+            }
+            if (spritetooltouse == "cst")
+            {
+                radioButton1.Checked = false;
+                radioButton2.Checked = false;
+                radioButton3.Checked = false;
+                radioButton4.Checked = true;
+                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/clsptool/csprites.txt");
+            }
+            if (spritetooltouse == "pixi")
+            {
+                radioButton1.Checked = false;
+                radioButton2.Checked = true;
+                radioButton3.Checked = false;
+                radioButton4.Checked = false;
+                textBox1.Text = File.ReadAllText(Properties.Settings.Default.installDirectory + "files/pixi/list.txt");
+            }
+        }
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked) Properties.Settings.Default.spritetoolOption = "romi";
+            if (radioButton2.Checked) Properties.Settings.Default.spritetoolOption = "pixi";
+            if (radioButton3.Checked) Properties.Settings.Default.spritetoolOption = "owst";
+            if (radioButton4.Checked) Properties.Settings.Default.spritetoolOption = "cst";
+            Properties.Settings.Default.Save();
+            CheckSptoolType(); // redundant because it essentially redoes your radiobutton click, will fix later
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
